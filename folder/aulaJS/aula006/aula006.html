@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM2</title>
+</head>
+
+<body>
+    <div id="area">
+        <div id="mid">
+            <p id="rs">----</p>
+            <input type="number" name="txtn1" id="txtn1">
+            <p>+</p>
+            <input type="number" name="txtn2" id="txtn2">
+            <button id="bt" onclick="soma()">soma</button>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        function soma() {
+            tn1 = window.document.getElementById('txtn1')
+            tn2 = window.document.getElementById('txtn2')
+
+            var r = window.document.getElementById('rs')
+            var num1 = Number.parseInt(tn1.value)
+            var num2 = Number.parseInt(tn2.value)
+
+            var soma = num1 + num2
+            r.innerText = `${num1} + ${num2} = ${soma}`
+        }
+    </script>
+
+</body>
+
+</html>
