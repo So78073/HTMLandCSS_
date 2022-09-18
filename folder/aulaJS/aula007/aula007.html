@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula07</title>
+</head>
+<body>
+    <p id="horas">são xH</p>
+    <h1>nacionalidade</h1>
+    qual é o seu pais? <input type="text" name="txtvel" id="txtvel">
+    <button onclick="calcular()">---</button>
+
+    <p id="paragrafo"></p>
+
+    <script>
+        var h = window.document.getElementById('horas')
+        var now =  new Date()
+        h.innerText = `${now.getHours()}H`
+        
+        function calcular(){
+            var p = window.document.getElementById('paragrafo')
+            var tn1 = window.document.getElementById('txtvel')
+            var tn1 = tn1.value
+            if(tn1 == 'brasil') {p.innerText = 'Você é brasileiro !'}
+            else if (tn1 == 'canada') {p.innerText = 'Você é um urso v _ v'}
+            else{ p.innerText = "você é estrangeiro !"}
+        }
+    </script>
+</body>
+</html>
